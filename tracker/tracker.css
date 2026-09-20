@@ -1,0 +1,43 @@
+.tabs {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px;
+  background: var(--muted-bg); padding: 4px; border-radius: var(--radius-md); margin-bottom: 18px;
+}
+.tab {
+  font: inherit; font-size: 14px; font-weight: 700; min-height: 40px; padding: 6px 4px;
+  border: 0; border-radius: var(--radius-sm); background: transparent; color: var(--text-muted); cursor: pointer;
+}
+.tab[aria-selected="true"] { background: var(--card-bg); color: var(--text); box-shadow: var(--shadow-sm); }
+
+.h2 { font-size: 18px; margin: 24px 0 8px; letter-spacing: -0.01em; }
+.panel > .h2:first-child { margin-top: 0; }
+.form { padding: 16px; display: grid; gap: 14px; margin-bottom: 16px; }
+.row { display: flex; flex-wrap: wrap; gap: 10px; }
+.row .btn { flex: 1 1 140px; }
+
+.summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-bottom: 16px; }
+.stat { padding: 12px 14px; }
+.stat b { display: block; font-size: 26px; line-height: 1.1; letter-spacing: -0.02em; }
+.stat span { font-size: 13px; color: var(--text-muted); }
+
+.community { padding: 14px 16px; margin-bottom: 14px; }
+.community h3 { margin: 0 0 2px; font-size: 17px; }
+.community .sub { margin: 0 0 10px; font-size: 13px; color: var(--text-muted); }
+.community .note { margin: 0 0 10px; font-size: 14px; white-space: pre-wrap; }
+.rows { list-style: none; margin: 0; padding: 0; }
+.rows li { display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; align-items: center; padding: 10px 0; border-top: 1px solid var(--border-soft); }
+.rows .what b { display: block; font-size: 15px; }
+.rows .what span { font-size: 13px; color: var(--text-muted); }
+.rows .act { display: flex; align-items: center; gap: 8px; }
+.tag.big { font-size: 13px; padding: 4px 10px; }
+
+.hist { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.hist li { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 10px 12px; }
+.hist .what span { display: block; font-size: 13px; color: var(--text-muted); }
+
+.community-edit { padding: 14px 16px; margin-bottom: 14px; display: grid; gap: 12px; }
+.community-edit h3 { margin: 0; font-size: 16px; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.blocklist { display: grid; gap: 4px; max-height: 180px; overflow: auto; }
+.blocklist label { font-size: 14px; display: flex; align-items: center; gap: 8px; min-height: 32px; }
+.blocklist input { width: 18px; height: 18px; }
+details.more summary { cursor: pointer; font-size: 14px; font-weight: 600; min-height: 32px; }

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Post Tracker (private)</title>
+<link rel="icon" href="../docs/favicon.svg" type="image/svg+xml">
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem("theme");
+    if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+  } catch (e) {}
+})();
+</script>
+<link rel="stylesheet" href="../docs/style.css">
+<link rel="stylesheet" href="tracker.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <h1 class="brand">Post Tracker <small>private, this device only</small></h1>
+    <button id="themeToggle" class="icon-btn" type="button">☾</button>
+  </div>
+</header>
+
+<main>
+  <aside class="disclosure" aria-label="What this tool is">
+    <strong>A record-keeper, not a scheduler.</strong>
+    <p>You set each community's cooldown from its own rules and check those rules yourself; this tool only counts the days since you last posted. "Eligible" means your configured cooldown has passed, not that posting is a good idea or that the mods will allow it. Never post more often than a community permits, and leave admin-only offers to the admins.</p>
+  </aside>
+
+  <div id="offersError" class="notice error" hidden></div>
+
+  <nav class="tabs" role="tablist" aria-label="Sections">
+    <button role="tab" class="tab" data-tab="status" aria-selected="true">Status</button>
+    <button role="tab" class="tab" data-tab="compose" aria-selected="false">Compose</button>
+    <button role="tab" class="tab" data-tab="log" aria-selected="false">Log a post</button>
+    <button role="tab" class="tab" data-tab="setup" aria-selected="false">Setup</button>
+  </nav>
+
+  <!-- STATUS -->
+  <section id="tab-status" class="panel" role="tabpanel">
+    <div id="statusSummary" class="summary"></div>
+    <div id="statusCommunities"></div>
+  </section>
+
+  <!-- COMPOSE -->
+  <section id="tab-compose" class="panel" role="tabpanel" hidden>
+    <div class="card form">
+      <label class="field"><span>Offer</span><select id="composeOffer"></select></label>
+      <label class="field"><span>Community <span class="hint">(optional, shows its status and notes)</span></span><select id="composeCommunity"></select></label>
+      <div id="composeStatus"></div>
+      <label class="field"><span>Post body <span class="hint">(edit freely, then copy)</span></span><textarea id="composeBody" rows="14"></textarea></label>
+      <p class="hint">The body includes a plain referral disclosure and both sides of the deal. Check it against the community's own posting rules before you use it, since some ask for a specific format.</p>
+      <div class="row">
+        <button id="copyBtn" class="btn" type="button">Copy post</button>
+        <button id="regenBtn" class="btn secondary" type="button">Reset text</button>
+      </div>
+      <p id="copyMsg" class="hint" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- LOG -->
+  <section id="tab-log" class="panel" role="tabpanel" hidden>
+    <form id="logForm" class="card form">
+      <label class="field"><span>Offer</span><select id="logOffer" required></select></label>
+      <label class="field"><span>Community</span><select id="logCommunity" required></select></label>
+      <label class="field"><span>Date posted</span><input id="logDate" type="date" required></label>
+      <label class="field"><span>Link to the post <span class="hint">(optional)</span></span><input id="logUrl" type="url" placeholder="https://…"></label>
+      <button class="btn" type="submit">Record post</button>
+      <p id="logMsg" class="hint" aria-live="polite"></p>
+    </form>
+    <h2 class="h2">History</h2>
+    <div id="history"></div>
+  </section>
+
+  <!-- SETUP -->
+  <section id="tab-setup" class="panel" role="tabpanel" hidden>
+    <h2 class="h2">Communities</h2>
+    <p class="hint">Add each place you post and set its cooldown in days, as stated in that community's own rules. Leave it blank if you're not sure and the tool will say it isn't set rather than guess.</p>
+    <div id="communityList"></div>
+    <form id="communityForm" class="card form">
+      <label class="field"><span>New community name</span><input id="newName" type="text" placeholder="e.g. r/example" required maxlength="60"></label>
+      <button class="btn secondary" type="submit">Add community</button>
+    </form>
+
+    <h2 class="h2">Your hub link</h2>
+    <label class="field"><span>Included at the end of composed posts <span class="hint">(optional)</span></span>
+      <input id="hubUrl" type="url" placeholder="https://your-name.github.io/referral-hub/"></label>
+
+    <h2 class="h2">Backup</h2>
+    <p class="hint">Everything lives in this browser's storage. Clearing site data, or using a different browser or device, means it isn't there. Export a copy now and then.</p>
+    <div class="row">
+      <button id="exportBtn" class="btn secondary" type="button">Export backup</button>
+      <label class="btn secondary" for="importFile">Import backup</label>
+      <input id="importFile" type="file" accept="application/json,.json" class="visually-hidden">
+    </div>
+    <p id="backupMsg" class="hint" aria-live="polite"></p>
+  </section>
+</main>
+
+<script src="../docs/common.js"></script>
+<script src="logic.js"></script>
+<script src="tracker.js"></script>
+</body>
+</html>
