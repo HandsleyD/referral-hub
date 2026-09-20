@@ -1,0 +1,20 @@
+name: Validate offers and tracker logic
+
+on:
+  push:
+    paths: ["docs/**", "tracker/**", "scripts/**"]
+  pull_request:
+    paths: ["docs/**", "tracker/**", "scripts/**"]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate offers.json
+        run: node scripts/validate-offers.mjs
+      - name: Tracker and date logic tests
+        run: node scripts/test-tracker.mjs
