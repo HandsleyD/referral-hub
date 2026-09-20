@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UK Referral Offers</title>
+<meta name="description" content="Current UK sign-up offers, with every referral link clearly disclosed: what you get, what I get, and the conditions.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+<script>
+// Apply a stored theme choice before first paint to avoid a flash; with no
+// stored choice style.css follows the system setting.
+(function () {
+  try {
+    var t = localStorage.getItem("theme");
+    if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+  } catch (e) {}
+})();
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <h1 class="brand">UK Referral Offers</h1>
+    <button id="themeToggle" class="icon-btn" type="button">☾</button>
+  </div>
+</header>
+
+<main>
+  <section class="intro">
+    <h2>Sign-up offers worth having</h2>
+    <p>A short, hand-picked list of UK sign-up bonuses. Each one shows exactly what you get, what I get, and what you need to do to qualify.</p>
+  </section>
+
+  <!-- Disclosure sits above the offers, before any link, on purpose: UK ad
+       rules (CAP Code / CMA guidance) want it clear and up front. -->
+  <aside class="disclosure" aria-label="Disclosure">
+    <strong>These are my referral links.</strong>
+    <p>If you sign up through a link on this page, I usually get a reward too. Every offer lists both sides of the deal, so you can see exactly what I get before you click.</p>
+    <p>This isn't financial advice. Always check the provider's own terms before signing up, as offers can change.</p>
+  </aside>
+
+  <section class="controls" aria-label="Filter offers">
+    <label class="visually-hidden" for="search">Search offers</label>
+    <input id="search" type="search" placeholder="Search offers, e.g. bank, cashback…" autocomplete="off">
+    <div id="categoryChips" class="chips" role="group" aria-label="Category"></div>
+    <div class="controls-row">
+      <label class="field">
+        <span>You get at least</span>
+        <select id="minValue">
+          <option value="0">Any value</option>
+          <option value="5">£5+</option>
+          <option value="10">£10+</option>
+          <option value="25">£25+</option>
+          <option value="50">£50+</option>
+        </select>
+      </label>
+      <label class="field">
+        <span>Sort by</span>
+        <select id="sort">
+          <option value="value">Highest value</option>
+          <option value="ending">Ending soonest</option>
+          <option value="az">Provider A–Z</option>
+        </select>
+      </label>
+    </div>
+  </section>
+
+  <p id="resultMeta" class="result-meta" aria-live="polite"></p>
+  <ul id="offerList" class="offer-list"></ul>
+  <div id="status" class="notice" hidden></div>
+</main>
+
+<footer class="site-footer">
+  <p><strong>How this page works.</strong> Offers drop off automatically after their end date. "Terms checked" shows the last time I confirmed an offer against the provider's own page. If something looks out of date, the provider's terms always win.</p>
+  <p>Most offers are for new customers aged 18+ living in the UK. Where an offer involves investing, your capital is at risk.</p>
+</footer>
+
+<script src="common.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

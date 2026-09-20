@@ -1,0 +1,95 @@
+[
+  {
+    "id": "example-bank",
+    "placeholder": true,
+    "provider": "Example Bank (placeholder)",
+    "category": "Banking",
+    "userGets": "£20 bonus",
+    "userValue": 20,
+    "referrerGets": "£20 bonus",
+    "conditions": [
+      "PLACEHOLDER: replace with the provider's real conditions",
+      "e.g. open an account and make one card payment within 30 days"
+    ],
+    "expires": "2026-12-31",
+    "checked": "2026-09-19",
+    "link": "https://example.com/replace-with-your-referral-link"
+  },
+  {
+    "id": "example-cashback",
+    "placeholder": true,
+    "provider": "Example Cashback Site (placeholder)",
+    "category": "Cashback",
+    "userGets": "£5 when you earn your first £5 cashback",
+    "userValue": 5,
+    "referrerGets": "£5",
+    "conditions": [
+      "PLACEHOLDER: e.g. new members only",
+      "e.g. first cashback must confirm within 90 days"
+    ],
+    "expires": null,
+    "checked": "2026-09-19",
+    "link": "https://example.com/replace-with-your-referral-link"
+  },
+  {
+    "id": "example-invest",
+    "placeholder": true,
+    "provider": "Example Investing App (placeholder)",
+    "category": "Investing",
+    "userGets": "A free share worth £10–£100",
+    "userValue": 10,
+    "referrerGets": "A free share worth £10–£100",
+    "conditions": [
+      "PLACEHOLDER: e.g. deposit £1 or more within 30 days"
+    ],
+    "riskWarning": "PLACEHOLDER: Capital at risk. The value of investments can go down as well as up. Use the provider's own required wording here.",
+    "expires": "2026-10-15",
+    "checked": "2026-09-19",
+    "link": "https://example.com/replace-with-your-referral-link"
+  },
+  {
+    "id": "example-energy",
+    "placeholder": true,
+    "provider": "Example Energy Supplier (placeholder)",
+    "category": "Energy",
+    "userGets": "£50 account credit",
+    "userValue": 50,
+    "referrerGets": "£50 account credit",
+    "conditions": [
+      "PLACEHOLDER: e.g. credit applied after your switch completes"
+    ],
+    "expires": "2026-09-24",
+    "checked": "2026-09-19",
+    "link": "https://example.com/replace-with-your-referral-link"
+  },
+  {
+    "id": "example-shopping",
+    "placeholder": true,
+    "provider": "Example Shopping App (placeholder)",
+    "category": "Shopping",
+    "userGets": "£10 off your first order",
+    "userValue": 10,
+    "referrerGets": "£10 credit",
+    "conditions": [
+      "PLACEHOLDER: e.g. minimum first order £30"
+    ],
+    "expires": "2026-11-30",
+    "checked": "2026-09-19",
+    "link": "https://example.com/replace-with-your-referral-link"
+  },
+  {
+    "id": "example-expired",
+    "placeholder": true,
+    "provider": "Example Expired Offer (placeholder)",
+    "category": "Banking",
+    "userGets": "£15 bonus",
+    "userValue": 15,
+    "referrerGets": "£15 bonus",
+    "conditions": [
+      "PLACEHOLDER: this one's end date has passed, so it is hidden automatically"
+    ],
+    "expires": "2026-08-31",
+    "checked": "2026-08-01",
+    "link": "https://example.com/replace-with-your-referral-link"
+  }
+]
