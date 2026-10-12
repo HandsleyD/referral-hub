@@ -1,95 +1,33 @@
 [
   {
-    "id": "example-bank",
-    "placeholder": true,
-    "provider": "Example Bank (placeholder)",
-    "category": "Banking",
-    "userGets": "£20 bonus",
-    "userValue": 20,
-    "referrerGets": "£20 bonus",
+    "id": "dataannotation",
+    "provider": "DataAnnotation",
+    "category": "Side income",
+    "userGets": "Access to paid project work in your field. No sign-up bonus.",
+    "referrerGets": "A bonus of 20% of your approved project earnings, up to $3,000 per person I refer",
     "conditions": [
-      "PLACEHOLDER: replace with the provider's real conditions",
-      "e.g. open an account and make one card payment within 30 days"
-    ],
-    "expires": "2026-12-31",
-    "checked": "2026-09-19",
-    "link": "https://example.com/replace-with-your-referral-link"
-  },
-  {
-    "id": "example-cashback",
-    "placeholder": true,
-    "provider": "Example Cashback Site (placeholder)",
-    "category": "Cashback",
-    "userGets": "£5 when you earn your first £5 cashback",
-    "userValue": 5,
-    "referrerGets": "£5",
-    "conditions": [
-      "PLACEHOLDER: e.g. new members only",
-      "e.g. first cashback must confirm within 90 days"
+      "Pick the link for your field below so you start in the right place",
+      "My bonus is paid by DataAnnotation on top of your earnings, not taken from them",
+      "My bonus only counts approved work on projects. Starter assessments, qualifications and certain paid trainings don't count towards it",
+      "My rewards can be held while your work or account is under review",
+      "Check on DataAnnotation's own site that work is open to you where you live, and what it pays"
     ],
     "expires": null,
-    "checked": "2026-09-19",
-    "link": "https://example.com/replace-with-your-referral-link"
-  },
-  {
-    "id": "example-invest",
-    "placeholder": true,
-    "provider": "Example Investing App (placeholder)",
-    "category": "Investing",
-    "userGets": "A free share worth £10–£100",
-    "userValue": 10,
-    "referrerGets": "A free share worth £10–£100",
-    "conditions": [
-      "PLACEHOLDER: e.g. deposit £1 or more within 30 days"
-    ],
-    "riskWarning": "PLACEHOLDER: Capital at risk. The value of investments can go down as well as up. Use the provider's own required wording here.",
-    "expires": "2026-10-15",
-    "checked": "2026-09-19",
-    "link": "https://example.com/replace-with-your-referral-link"
-  },
-  {
-    "id": "example-energy",
-    "placeholder": true,
-    "provider": "Example Energy Supplier (placeholder)",
-    "category": "Energy",
-    "userGets": "£50 account credit",
-    "userValue": 50,
-    "referrerGets": "£50 account credit",
-    "conditions": [
-      "PLACEHOLDER: e.g. credit applied after your switch completes"
-    ],
-    "expires": "2026-09-24",
-    "checked": "2026-09-19",
-    "link": "https://example.com/replace-with-your-referral-link"
-  },
-  {
-    "id": "example-shopping",
-    "placeholder": true,
-    "provider": "Example Shopping App (placeholder)",
-    "category": "Shopping",
-    "userGets": "£10 off your first order",
-    "userValue": 10,
-    "referrerGets": "£10 credit",
-    "conditions": [
-      "PLACEHOLDER: e.g. minimum first order £30"
-    ],
-    "expires": "2026-11-30",
-    "checked": "2026-09-19",
-    "link": "https://example.com/replace-with-your-referral-link"
-  },
-  {
-    "id": "example-expired",
-    "placeholder": true,
-    "provider": "Example Expired Offer (placeholder)",
-    "category": "Banking",
-    "userGets": "£15 bonus",
-    "userValue": 15,
-    "referrerGets": "£15 bonus",
-    "conditions": [
-      "PLACEHOLDER: this one's end date has passed, so it is hidden automatically"
-    ],
-    "expires": "2026-08-31",
-    "checked": "2026-08-01",
-    "link": "https://example.com/replace-with-your-referral-link"
+    "checked": "2026-10-12",
+    "links": [
+      { "label": "Software Engineering", "url": "https://app.dataannotation.tech/referrals/join?token=Mo0Dk7WyIpIv-VtozrhqdEIc7KRKoG8dDz7Ipruf9Cw" },
+      { "label": "Law", "url": "https://app.dataannotation.tech/referrals/join?token=o9uDSZINR6405GqtlSbMyjltlO22XGaW8agdS8ySHN4" },
+      { "label": "Accounting", "url": "https://app.dataannotation.tech/referrals/join?token=LpWhZXo4flPOmSGtf6ei5e_CMNyJIYip3Jhc9l4pxVg" },
+      { "label": "Finance", "url": "https://app.dataannotation.tech/referrals/join?token=oKpmFnH3HIGSW9bgSLObsn92YxqQ1ECbNSlu1JzqWOs" },
+      { "label": "Healthcare Ops", "url": "https://app.dataannotation.tech/referrals/join?token=B8OMP0z1tR2UPmzdSD_zhqONb8E4rQRJHaVyLku_Hvw" },
+      { "label": "Medicine", "url": "https://app.dataannotation.tech/referrals/join?token=nsYHtWeXnguB70_rhnTm70eDsESH4s0O0Ku-LyqfowY" },
+      { "label": "Data Science", "url": "https://app.dataannotation.tech/referrals/join?token=rquaV_nfsU7qtQkzgLpvoeDMBXPwZnvbCYbZ2DrRDaI" },
+      { "label": "Math", "url": "https://app.dataannotation.tech/referrals/join?token=NjLO2aXDUtCnbH48OzUAAcx9onDcf_yGFjg96QtvUWA" },
+      { "label": "Physics", "url": "https://app.dataannotation.tech/referrals/join?token=QAdBGRjIrLZZY6ujYLnqxDiWY0JKlRuxb-mHq1sgvQA" },
+      { "label": "Chemistry", "url": "https://app.dataannotation.tech/referrals/join?token=-uAkFLikSjH7r5Ko1k4SJgPXakzCLwF2YdAHxmvmi9Q" },
+      { "label": "Biology", "url": "https://app.dataannotation.tech/referrals/join?token=eVtaTwsTTbw-q53lfPFsjAycacwDebez2WJKfSwcpdQ" },
+      { "label": "Mechanical Engineering", "url": "https://app.dataannotation.tech/referrals/join?token=2SEDrwEm1kvUjMgHBUYBCP8E31CQG8fOA3bKB5p65hs" },
+      { "label": "Electrical Engineering", "url": "https://app.dataannotation.tech/referrals/join?token=MASR4R9KczabYnl8edm0SYz7Oe5zgGbN3WuBr9OiNgI" }
+    ]
   }
 ]

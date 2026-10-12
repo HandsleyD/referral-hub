@@ -49,7 +49,8 @@ Open `docs/offers.json` and add an object to the list. You never touch the HTML.
 | `conditions` | no | List of qualifying conditions: minimum spend, time limits, eligibility. |
 | `expires` | no | `YYYY-MM-DD`, or `null` for no end date. Live *through* that date, gone the day after. |
 | `checked` | no | The date you last confirmed the terms against the provider's own page. Shown on the card. |
-| `link` | yes | Your referral link. Must be `https://`. |
+| `link` | yes* | Your referral link. Must be `https://`. |
+| `links` | yes* | Instead of `link`: a list like `[{"label": "Law", "url": "https://…"}]` for one provider with several links (e.g. one per field). Shown as a "Choose your field" row of buttons. *Use one of `link` or `links`. |
 | `riskWarning` | no | Required wording for investing products. Shown prominently on the card. |
 | `placeholder` | no | `true` shows the card with a disabled button. Delete the placeholders once you have real offers. |
 
@@ -61,9 +62,9 @@ node scripts/validate-offers.mjs
 
 GitHub also runs this check on every push (`.github/workflows/validate.yml`). It warns about entries whose terms were last checked more than 30 days ago.
 
-### The seed data is placeholder-only
+### Placeholders
 
-Every entry that ships in `offers.json` is invented, marked `placeholder`, and has no real link. Provider names, amounts and dates are illustrative only. Replace them with real offers and real terms taken from the provider's own page.
+`offers.json` now holds your real DataAnnotation offer. If you ever add placeholder entries to test the layout, mark them `"placeholder": true` so they show with a disabled button.
 
 ## Disclosure
 

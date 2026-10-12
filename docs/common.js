@@ -71,10 +71,17 @@
     if (!o || typeof o !== "object" || Array.isArray(o)) return ["is not an object"];
     if (!nonEmptyString(o.id)) p.push('missing "id"');
     else if (!ID_RE.test(o.id)) p.push('"id" must be lowercase letters, numbers and hyphens (e.g. "example-bank")');
-    for (const f of ["provider", "category", "userGets", "referrerGets", "link"]) {
+    for (const f of ["provider", "category", "userGets", "referrerGets"]) {
       if (!nonEmptyString(o[f])) p.push('missing "' + f + '"');
     }
-    if (nonEmptyString(o.link) && !isHttpsUrl(o.link)) p.push('"link" must be a full https:// URL');
+    // An offer has either one "link" or a "links" list of {label, url} (e.g.
+    // one link per field/product). At least one is needed.
+    if (o.links !== undefined) {
+      if (!Array.isArray(o.links) || !o.links.length || !o.links.every((l) => l && nonEmptyString(l.label) && isHttpsUrl(l.url))) {
+        p.push('"links" must be a list like [{"label": "Name", "url": "https://..."}]');
+      }
+    } else if (!nonEmptyString(o.link)) p.push('missing "link" (or a "links" list)');
+    if (o.link !== undefined && !isHttpsUrl(o.link)) p.push('"link" must be a full https:// URL');
     if (o.userValue !== undefined && (typeof o.userValue !== "number" || !isFinite(o.userValue) || o.userValue < 0)) {
       p.push('"userValue" must be a number of pounds, e.g. 20 (or leave it out)');
     }

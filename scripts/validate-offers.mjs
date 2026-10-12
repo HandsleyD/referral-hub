@@ -23,7 +23,7 @@ for (const o of offers) {
   else {
     if (!o.checked) console.warn(`warn   ${o.id}: no "checked" date, so visitors can't see when terms were last verified`);
     else if (RH.daysBetween(o.checked, today) > STALE_DAYS) console.warn(`warn   ${o.id}: terms last checked ${o.checked} (${RH.daysBetween(o.checked, today)} days ago)`);
-    if (/example\.com/.test(o.link)) console.warn(`warn   ${o.id}: link still points at example.com`);
+    if (/example\.com/.test(o.link || JSON.stringify(o.links))) console.warn(`warn   ${o.id}: link still points at example.com`);
   }
 }
 console.log(`\n${offers.length} valid, ${problems.length} problem(s), ${offers.filter((o) => !RH.isExpired(o, today)).length} live today (${today})`);

@@ -87,10 +87,13 @@
     const conditions = (o.conditions || []).length
       ? `<div><p class="section-label">To qualify</p><ul class="conditions">${o.conditions.map((c) => `<li>${escapeHTML(c)}</li>`).join("")}</ul></div>`
       : "";
+    const note = `<span class="btn-note">Referral link${o.links ? "s" : ""}: I get ${escapeHTML(o.referrerGets)}</span>`;
     const link = o.placeholder
       ? `<span class="btn" aria-disabled="true">Example only, no link</span>`
-      : `<a class="btn" href="${escapeHTML(o.link)}" target="_blank" rel="sponsored noopener">Get this offer ↗</a>
-         <span class="btn-note">Referral link: I get ${escapeHTML(o.referrerGets)} if you qualify</span>`;
+      : o.links
+        ? `<p class="section-label">Choose your field</p>
+           <div class="link-grid">${o.links.map((l) => `<a class="btn secondary small" href="${escapeHTML(l.url)}" target="_blank" rel="sponsored noopener">${escapeHTML(l.label)} ↗</a>`).join("")}</div>${note}`
+        : `<a class="btn" href="${escapeHTML(o.link)}" target="_blank" rel="sponsored noopener">Get this offer ↗</a>${note}`;
     return `<li class="card offer" id="${escapeHTML(o.id)}">
       <div class="offer-head">
         <h3>${escapeHTML(o.provider)}</h3>

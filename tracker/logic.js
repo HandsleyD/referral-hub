@@ -57,7 +57,7 @@
     const lines = [];
     lines.push(offer.provider + ": " + offer.userGets);
     lines.push("");
-    lines.push("Disclosure: this is my referral link, so I get " + offer.referrerGets + " if you qualify.");
+    lines.push("Disclosure: this is my referral link. I get: " + offer.referrerGets + ".");
     lines.push("You get: " + offer.userGets);
     if ((offer.conditions || []).length) {
       lines.push("");
@@ -67,7 +67,10 @@
     if (offer.expires) lines.push("\nEnds: " + RH.formatDate(offer.expires));
     if (offer.riskWarning) lines.push("\n" + offer.riskWarning);
     lines.push("");
-    lines.push("Link: " + offer.link);
+    if (offer.links) {
+      lines.push("Links (pick your field):");
+      for (const l of offer.links) lines.push("- " + l.label + ": " + l.url);
+    } else lines.push("Link: " + offer.link);
     if (hubUrl) lines.push("All my current offers: " + hubUrl);
     lines.push("");
     lines.push("Check the provider's own terms before signing up. They can change.");

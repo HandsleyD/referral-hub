@@ -84,7 +84,7 @@ test("zero-day cooldown is allowed and is immediately eligible", () => {
 test("composePost states the disclosure and both sides", () => {
   const body = T.composePost({ ...offer, conditions: ["Spend £10"] }, "https://x.example/hub/");
   assert.match(body, /my referral link/);
-  assert.match(body, /I get £5/);
+  assert.match(body, /I get: £5/);
   assert.match(body, /You get: £5/);
   assert.match(body, /- Spend £10/);
   assert.match(body, /https:\/\/a\.example/);
@@ -100,6 +100,15 @@ test("sanitizeState drops junk and keeps valid data", () => {
   assert.equal(s.communities[0].cooldownDays, null);
   assert.equal(s.posts.length, 1);
   assert.deepEqual(T.sanitizeState(null), { communities: [], posts: [], hubUrl: "" });
+});
+test("offers can carry a list of labelled links instead of one link", () => {
+  const multi = { id: "m", provider: "M", category: "X", userGets: "u", referrerGets: "r", links: [{ label: "A", url: "https://a.example/?t=1" }] };
+  assert.deepEqual(RH.offerProblems(multi), []);
+  assert.ok(RH.offerProblems({ ...multi, links: [{ label: "A", url: "http://a.example" }] }).length);
+  assert.ok(RH.offerProblems({ ...multi, links: [] }).length);
+  const { links, ...none } = multi;
+  assert.ok(RH.offerProblems(none).length);
+  assert.match(T.composePost(multi), /- A: https:\/\/a\.example\/\?t=1/);
 });
 
 console.log("\n" + n + " tests passed");
