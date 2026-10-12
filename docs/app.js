@@ -105,10 +105,12 @@
         <div class="me"><dt>I get</dt><dd>${escapeHTML(o.referrerGets)}</dd></div>
       </dl>
       ${conditions}
+      ${o.code ? `<div class="code-box"><span>Use my referral code</span><b>${escapeHTML(o.code)}</b><button type="button" class="btn secondary small" data-copy="${escapeHTML(o.code)}">Copy</button></div>` : ""}
       ${o.riskWarning ? `<p class="risk">${escapeHTML(o.riskWarning)}</p>` : ""}
       <div class="offer-meta">
         <span>${exp.text} ${exp.tag}</span>
         ${o.checked ? `<span>Terms checked ${formatDate(o.checked)}</span>` : ""}
+        ${o.terms ? `<a href="${escapeHTML(o.terms)}" target="_blank" rel="noopener">Provider's terms ↗</a>` : ""}
       </div>
       <div class="offer-foot">${link}</div>
     </li>`;
@@ -151,6 +153,19 @@
     state.cat = b.dataset.cat;
     for (const c of els.chips.children) c.setAttribute("aria-pressed", String(c === b));
     update();
+  });
+
+  els.list.addEventListener("click", async (e) => {
+    const b = e.target.closest("[data-copy]");
+    if (!b) return;
+    try { await navigator.clipboard.writeText(b.dataset.copy); b.textContent = "Copied"; }
+    catch (err) {
+      const code = b.parentElement.querySelector("b");
+      const sel = getSelection(), range = document.createRange();
+      range.selectNodeContents(code); sel.removeAllRanges(); sel.addRange(range);
+      b.textContent = "Press copy";
+    }
+    setTimeout(() => { b.textContent = "Copy"; }, 2000);
   });
 
   RH.initThemeToggle(document.getElementById("themeToggle"));

@@ -249,3 +249,11 @@ label.field .hint, .hint { font-weight: 500; color: var(--text-muted); font-size
 
 .link-grid { display: flex; flex-wrap: wrap; gap: 8px; }
 .link-grid .btn { flex: 1 1 auto; }
+
+.code-box {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  border: 1px dashed var(--accent); background: var(--accent-soft);
+  border-radius: var(--radius-md); padding: 10px 12px; font-size: 14px;
+}
+.code-box b { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 17px; letter-spacing: 0.04em; }
+.code-box .btn { margin-left: auto; }

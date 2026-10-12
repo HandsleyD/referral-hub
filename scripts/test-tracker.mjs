@@ -110,5 +110,14 @@ test("offers can carry a list of labelled links instead of one link", () => {
   assert.ok(RH.offerProblems(none).length);
   assert.match(T.composePost(multi), /- A: https:\/\/a\.example\/\?t=1/);
 });
+test("code and terms are validated and appear in composed posts", () => {
+  const o = { id: "c", provider: "C", category: "X", userGets: "u", referrerGets: "r", link: "https://c.example", code: "ABC123", terms: "https://c.example/terms" };
+  assert.deepEqual(RH.offerProblems(o), []);
+  assert.ok(RH.offerProblems({ ...o, terms: "not a url" }).length);
+  assert.ok(RH.offerProblems({ ...o, code: "  " }).length);
+  const body = T.composePost(o);
+  assert.match(body, /Referral code: ABC123/);
+  assert.match(body, /Terms: https:\/\/c\.example\/terms/);
+});
 
 console.log("\n" + n + " tests passed");

@@ -210,5 +210,23 @@
     "expires": null,
     "checked": "2026-10-12",
     "link": "https://join.robinhood.com/danielh-9bb910"
+  },
+  {
+    "id": "starling",
+    "provider": "Starling Bank",
+    "category": "Banking",
+    "userGets": "£25",
+    "userValue": 25,
+    "referrerGets": "£25",
+    "conditions": [
+      "Download the Starling app and open an account using my referral code",
+      "Set up a direct debit within the first 30 days of opening the account",
+      "Starling's referral terms apply"
+    ],
+    "code": "VVDQAUR",
+    "terms": "https://www.starlingbank.com/legal/terms/starling-referral-terms/",
+    "expires": null,
+    "checked": "2026-10-12",
+    "link": "https://www.starlingbank.com/"
   }
 ]

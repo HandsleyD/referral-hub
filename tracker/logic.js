@@ -67,10 +67,12 @@
     if (offer.expires) lines.push("\nEnds: " + RH.formatDate(offer.expires));
     if (offer.riskWarning) lines.push("\n" + offer.riskWarning);
     lines.push("");
+    if (offer.code) lines.push("Referral code: " + offer.code);
     if (offer.links) {
       lines.push("Links (pick your field):");
       for (const l of offer.links) lines.push("- " + l.label + ": " + l.url);
-    } else lines.push("Link: " + offer.link);
+    } else if (offer.link) lines.push("Link: " + offer.link);
+    if (offer.terms) lines.push("Terms: " + offer.terms);
     if (hubUrl) lines.push("All my current offers: " + hubUrl);
     lines.push("");
     lines.push("Check the provider's own terms before signing up. They can change.");
