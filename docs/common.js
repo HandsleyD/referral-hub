@@ -94,6 +94,7 @@
     if (o.conditions !== undefined && (!Array.isArray(o.conditions) || !o.conditions.every(nonEmptyString))) {
       p.push('"conditions" must be a list of text lines, e.g. ["Spend £10 within 30 days"]');
     }
+    if (o.buttonLabel !== undefined && !nonEmptyString(o.buttonLabel)) p.push('"buttonLabel" must be text (or leave it out)');
     if (o.code !== undefined && !nonEmptyString(o.code)) p.push('"code" must be text (or leave it out)');
     if (o.terms !== undefined && !isHttpsUrl(o.terms)) p.push('"terms" must be a full https:// URL (or leave it out)');
     for (const f of ["riskWarning", "notes"]) {

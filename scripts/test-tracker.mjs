@@ -115,6 +115,7 @@ test("code and terms are validated and appear in composed posts", () => {
   assert.deepEqual(RH.offerProblems(o), []);
   assert.ok(RH.offerProblems({ ...o, terms: "not a url" }).length);
   assert.ok(RH.offerProblems({ ...o, code: "  " }).length);
+  assert.ok(RH.offerProblems({ ...o, buttonLabel: "" }).length);
   const body = T.composePost(o);
   assert.match(body, /Referral code: ABC123/);
   assert.match(body, /Terms: https:\/\/c\.example\/terms/);

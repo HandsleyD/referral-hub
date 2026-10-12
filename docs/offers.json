@@ -233,7 +233,8 @@
     "expires": null,
     "checked": "2026-10-12",
     "link": "https://www.starlingbank.com/",
-    "riskWarning": "Starling describes this scheme as for existing customers to refer friends and family, limits how many referral codes can be shared, and can refuse a reward if it believes the promotion is being abused or could harm its reputation. So the reward isn't guaranteed."
+    "riskWarning": "Starling describes this scheme as for existing customers to refer friends and family, limits how many referral codes can be shared, and can refuse a reward if it believes the promotion is being abused or could harm its reputation. So the reward isn't guaranteed.",
+    "buttonLabel": "Go to Starling"
   },
   {
     "id": "trading212",

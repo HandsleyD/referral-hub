@@ -51,6 +51,7 @@ Open `docs/offers.json` and add an object to the list. You never touch the HTML.
 | `checked` | no | The date you last confirmed the terms against the provider's own page. Shown on the card. |
 | `link` | yes* | Your referral link. Must be `https://`. |
 | `links` | yes* | Instead of `link`: a list like `[{"label": "Law", "url": "https://…"}]` for one provider with several links (e.g. one per field). Shown as a "Choose your field" row of buttons. *Use one of `link` or `links`. |
+| `buttonLabel` | no | Text for the main button, e.g. `"Go to Starling"`. Defaults to "Get this offer". |
 | `code` | no | A referral code (for providers that use a code rather than a link). Shown in a box with a Copy button, and included in composed posts. |
 | `terms` | no | `https://` link to the provider's own referral terms. Shown on the card as "Provider's terms". |
 | `riskWarning` | no | Required wording for investing products. Shown prominently on the card. |

@@ -93,7 +93,7 @@
       : o.links
         ? `<p class="section-label">Choose your field</p>
            <div class="link-grid">${o.links.map((l) => `<a class="btn secondary small" href="${escapeHTML(l.url)}" target="_blank" rel="sponsored noopener">${escapeHTML(l.label)} ↗</a>`).join("")}</div>${note}`
-        : `<a class="btn" href="${escapeHTML(o.link)}" target="_blank" rel="sponsored noopener">Get this offer ↗</a>${note}`;
+        : `<a class="btn" href="${escapeHTML(o.link)}" target="_blank" rel="sponsored noopener">${escapeHTML(o.buttonLabel || "Get this offer")} ↗</a>${note}`;
     return `<li class="card offer" id="${escapeHTML(o.id)}">
       <div class="offer-head">
         <h3>${escapeHTML(o.provider)}</h3>
