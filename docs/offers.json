@@ -15,19 +15,76 @@
     "expires": null,
     "checked": "2026-10-12",
     "links": [
-      { "label": "Software Engineering", "url": "https://app.dataannotation.tech/referrals/join?token=Mo0Dk7WyIpIv-VtozrhqdEIc7KRKoG8dDz7Ipruf9Cw" },
-      { "label": "Law", "url": "https://app.dataannotation.tech/referrals/join?token=o9uDSZINR6405GqtlSbMyjltlO22XGaW8agdS8ySHN4" },
-      { "label": "Accounting", "url": "https://app.dataannotation.tech/referrals/join?token=LpWhZXo4flPOmSGtf6ei5e_CMNyJIYip3Jhc9l4pxVg" },
-      { "label": "Finance", "url": "https://app.dataannotation.tech/referrals/join?token=oKpmFnH3HIGSW9bgSLObsn92YxqQ1ECbNSlu1JzqWOs" },
-      { "label": "Healthcare Ops", "url": "https://app.dataannotation.tech/referrals/join?token=B8OMP0z1tR2UPmzdSD_zhqONb8E4rQRJHaVyLku_Hvw" },
-      { "label": "Medicine", "url": "https://app.dataannotation.tech/referrals/join?token=nsYHtWeXnguB70_rhnTm70eDsESH4s0O0Ku-LyqfowY" },
-      { "label": "Data Science", "url": "https://app.dataannotation.tech/referrals/join?token=rquaV_nfsU7qtQkzgLpvoeDMBXPwZnvbCYbZ2DrRDaI" },
-      { "label": "Math", "url": "https://app.dataannotation.tech/referrals/join?token=NjLO2aXDUtCnbH48OzUAAcx9onDcf_yGFjg96QtvUWA" },
-      { "label": "Physics", "url": "https://app.dataannotation.tech/referrals/join?token=QAdBGRjIrLZZY6ujYLnqxDiWY0JKlRuxb-mHq1sgvQA" },
-      { "label": "Chemistry", "url": "https://app.dataannotation.tech/referrals/join?token=-uAkFLikSjH7r5Ko1k4SJgPXakzCLwF2YdAHxmvmi9Q" },
-      { "label": "Biology", "url": "https://app.dataannotation.tech/referrals/join?token=eVtaTwsTTbw-q53lfPFsjAycacwDebez2WJKfSwcpdQ" },
-      { "label": "Mechanical Engineering", "url": "https://app.dataannotation.tech/referrals/join?token=2SEDrwEm1kvUjMgHBUYBCP8E31CQG8fOA3bKB5p65hs" },
-      { "label": "Electrical Engineering", "url": "https://app.dataannotation.tech/referrals/join?token=MASR4R9KczabYnl8edm0SYz7Oe5zgGbN3WuBr9OiNgI" }
+      {
+        "label": "Software Engineering",
+        "url": "https://app.dataannotation.tech/referrals/join?token=Mo0Dk7WyIpIv-VtozrhqdEIc7KRKoG8dDz7Ipruf9Cw"
+      },
+      {
+        "label": "Law",
+        "url": "https://app.dataannotation.tech/referrals/join?token=o9uDSZINR6405GqtlSbMyjltlO22XGaW8agdS8ySHN4"
+      },
+      {
+        "label": "Accounting",
+        "url": "https://app.dataannotation.tech/referrals/join?token=LpWhZXo4flPOmSGtf6ei5e_CMNyJIYip3Jhc9l4pxVg"
+      },
+      {
+        "label": "Finance",
+        "url": "https://app.dataannotation.tech/referrals/join?token=oKpmFnH3HIGSW9bgSLObsn92YxqQ1ECbNSlu1JzqWOs"
+      },
+      {
+        "label": "Healthcare Ops",
+        "url": "https://app.dataannotation.tech/referrals/join?token=B8OMP0z1tR2UPmzdSD_zhqONb8E4rQRJHaVyLku_Hvw"
+      },
+      {
+        "label": "Medicine",
+        "url": "https://app.dataannotation.tech/referrals/join?token=nsYHtWeXnguB70_rhnTm70eDsESH4s0O0Ku-LyqfowY"
+      },
+      {
+        "label": "Data Science",
+        "url": "https://app.dataannotation.tech/referrals/join?token=rquaV_nfsU7qtQkzgLpvoeDMBXPwZnvbCYbZ2DrRDaI"
+      },
+      {
+        "label": "Math",
+        "url": "https://app.dataannotation.tech/referrals/join?token=NjLO2aXDUtCnbH48OzUAAcx9onDcf_yGFjg96QtvUWA"
+      },
+      {
+        "label": "Physics",
+        "url": "https://app.dataannotation.tech/referrals/join?token=QAdBGRjIrLZZY6ujYLnqxDiWY0JKlRuxb-mHq1sgvQA"
+      },
+      {
+        "label": "Chemistry",
+        "url": "https://app.dataannotation.tech/referrals/join?token=-uAkFLikSjH7r5Ko1k4SJgPXakzCLwF2YdAHxmvmi9Q"
+      },
+      {
+        "label": "Biology",
+        "url": "https://app.dataannotation.tech/referrals/join?token=eVtaTwsTTbw-q53lfPFsjAycacwDebez2WJKfSwcpdQ"
+      },
+      {
+        "label": "Mechanical Engineering",
+        "url": "https://app.dataannotation.tech/referrals/join?token=2SEDrwEm1kvUjMgHBUYBCP8E31CQG8fOA3bKB5p65hs"
+      },
+      {
+        "label": "Electrical Engineering",
+        "url": "https://app.dataannotation.tech/referrals/join?token=MASR4R9KczabYnl8edm0SYz7Oe5zgGbN3WuBr9OiNgI"
+      }
     ]
+  },
+  {
+    "id": "edf-energy",
+    "provider": "EDF Energy",
+    "category": "Energy",
+    "userGets": "An account credit. EDF shows the current amount on its Refer a Friend page and can change it at any time.",
+    "referrerGets": "The same account credit (not withdrawable as cash)",
+    "conditions": [
+      "New residential customers only, switching electricity or gas to EDF directly",
+      "You can't have been an EDF customer in the last 12 months, or live at a property EDF already supplies",
+      "You must sign up through my link, directly with EDF. It won't count if you sign up through a third-party website",
+      "The credit is paid after you've both become EDF customers and your first payment has cleared, usually within 30 days of that",
+      "Can't be combined with other new-customer promotions. EDF can close the scheme at any time"
+    ],
+    "riskWarning": "EDF's terms say referral links should only be shared with friends and family, and EDF can refuse the credit, for both of us, if it suspects commercial use or sharing with people the referrer doesn't know. So the credit isn't guaranteed.",
+    "expires": null,
+    "checked": "2026-10-12",
+    "link": "https://edfenergy.com/quote/refer-a-friend/frosty-pool-8702"
   }
 ]
