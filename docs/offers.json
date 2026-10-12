@@ -192,5 +192,23 @@
     "expires": "2026-10-26",
     "checked": "2026-10-12",
     "link": "https://revolut.com/referral/?referral-code=danielav8!OCT1-26-AR-H2&geo-redirect"
+  },
+  {
+    "id": "robinhood-uk",
+    "provider": "Robinhood UK",
+    "category": "Investing",
+    "userGets": "A Robinhood UK investing account. The referral screens don't spell out a separate reward for you.",
+    "referrerGets": "5 fractional share rewards in stocks I choose from a list. 96% of rewards are worth $7 to $8 each, and I can earn up to $1,500 a year from referrals",
+    "conditions": [
+      "You and I must both be UK residents",
+      "Sign up through my link, get approved, link your bank account, and make a deposit within 14 calendar days",
+      "Shares given as rewards can't be sold until 3 trading days after they're granted, and their cash value can't be withdrawn for 60 days after the reward is claimed",
+      "Rewards not claimed within 60 days may expire",
+      "Receiving a stock reward isn't a recommendation to buy, sell or hold that stock. Robinhood doesn't give investment advice"
+    ],
+    "riskWarning": "All investments involve risks, including the possible loss of principal.",
+    "expires": null,
+    "checked": "2026-10-12",
+    "link": "https://join.robinhood.com/danielh-9bb910"
   }
 ]
