@@ -127,16 +127,17 @@
     "id": "klarna",
     "provider": "Klarna",
     "category": "Shopping",
-    "userGets": "A Klarna membership (Everywhere, Plus, Premium or Max). No sign-up bonus is listed.",
-    "referrerGets": "£6 if you join Everywhere, £13 for Plus, £25 for Premium or £40 for Max",
+    "userGets": "£6 for Everywhere, £13 for Plus, £25 for Premium or £40 for Max, depending on the membership you choose",
+    "referrerGets": "The same: £6 for Everywhere, £13 for Plus, £25 for Premium or £40 for Max",
     "conditions": [
       "Sign up through my link and make a purchase of at least £10",
-      "What I get depends on which membership you choose",
+      "What we each get depends on which membership you choose",
       "Check Klarna's own page for what each membership includes and costs"
     ],
     "riskWarning": "Klarna offers buy now, pay later credit. Only use credit you can afford to repay on time.",
     "expires": null,
     "checked": "2026-10-12",
-    "link": "https://l.klarna.com/22XC/invite_NILCa4Dk87XGkqOZ"
+    "link": "https://l.klarna.com/22XC/invite_NILCa4Dk87XGkqOZ",
+    "userValue": 6
   }
 ]
