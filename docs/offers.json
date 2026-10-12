@@ -122,5 +122,21 @@
     "checked": "2026-10-12",
     "link": "https://apply.lloydsbank.co.uk/sales-content/cwa/l/onboardpca/index-app.html?from=ob&webDirect=true&redesign=true&token=KZ8DaPxI8ci/q81LFhkH1DOH45A7L6SX6+jalsDPi+g=&redesign=true#/refer-friend",
     "riskWarning": "Each Lloyds referral link only lasts 14 days. You can still open an account through an expired link, but neither of us would get the £30. This card disappears when the link I last generated runs out, so if you can see it, the link should still be live."
+  },
+  {
+    "id": "klarna",
+    "provider": "Klarna",
+    "category": "Shopping",
+    "userGets": "A Klarna membership (Everywhere, Plus, Premium or Max). No sign-up bonus is listed.",
+    "referrerGets": "£6 if you join Everywhere, £13 for Plus, £25 for Premium or £40 for Max",
+    "conditions": [
+      "Sign up through my link and make a purchase of at least £10",
+      "What I get depends on which membership you choose",
+      "Check Klarna's own page for what each membership includes and costs"
+    ],
+    "riskWarning": "Klarna offers buy now, pay later credit. Only use credit you can afford to repay on time.",
+    "expires": null,
+    "checked": "2026-10-12",
+    "link": "https://l.klarna.com/22XC/invite_NILCa4Dk87XGkqOZ"
   }
 ]
