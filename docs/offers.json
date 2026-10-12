@@ -73,8 +73,8 @@
     "id": "edf-energy",
     "provider": "EDF Energy",
     "category": "Energy",
-    "userGets": "An account credit. EDF shows the current amount on its Refer a Friend page and can change it at any time.",
-    "referrerGets": "The same account credit (not withdrawable as cash)",
+    "userGets": "£50 off your energy bill. EDF says the amount can change at any time.",
+    "referrerGets": "£50 off my energy bill (an account credit, not withdrawable as cash)",
     "conditions": [
       "New residential customers only, switching electricity or gas to EDF directly",
       "You can't have been an EDF customer in the last 12 months, or live at a property EDF already supplies",
@@ -85,6 +85,7 @@
     "riskWarning": "EDF's terms say referral links should only be shared with friends and family, and EDF can refuse the credit, for both of us, if it suspects commercial use or sharing with people the referrer doesn't know. So the credit isn't guaranteed.",
     "expires": null,
     "checked": "2026-10-12",
-    "link": "https://edfenergy.com/quote/refer-a-friend/frosty-pool-8702"
+    "link": "https://edfenergy.com/quote/refer-a-friend/frosty-pool-8702",
+    "userValue": 50
   }
 ]
