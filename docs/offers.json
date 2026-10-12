@@ -251,5 +251,23 @@
     "expires": "2026-11-02",
     "checked": "2026-10-12",
     "link": "https://www.trading212.com/invite/4DtCrwrHcWM"
+  },
+  {
+    "id": "zopa-biscuit",
+    "provider": "Biscuit (Zopa)",
+    "category": "Banking",
+    "userGets": "£20",
+    "userValue": 20,
+    "referrerGets": "£20, for up to 10 people referred",
+    "conditions": [
+      "Open a Biscuit bank account using my referral link",
+      "Make at least 3 card transactions within 30 days",
+      "You'll both receive the £20 in your accounts within 30 days",
+      "My link has to be shared before 31 October 2026",
+      "Biscuit's referral terms apply"
+    ],
+    "expires": "2026-10-31",
+    "checked": "2026-10-12",
+    "link": "https://www.zopa.com/mgma?referralCode=bd056d0e1d9fb4f5fed8"
   }
 ]
