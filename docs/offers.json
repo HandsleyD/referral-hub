@@ -215,18 +215,23 @@
     "id": "starling",
     "provider": "Starling Bank",
     "category": "Banking",
-    "userGets": "£25",
+    "userGets": "£25, paid into a Space in your new account",
     "userValue": 25,
-    "referrerGets": "£25",
+    "referrerGets": "£25, paid into a Space in my account",
     "conditions": [
       "Download the Starling app and open an account using my referral code",
-      "Set up a direct debit within the first 30 days of opening the account",
-      "Starling's referral terms apply"
+      "Set up a direct debit within the first 30 days of opening the account. Standing orders, transfers, refunded payments, gambling and buying foreign currency or e-money don't count",
+      "You must be 18 or over and must never have had a Starling account before",
+      "Enter only one referral code. Only that code's owner gets the reward",
+      "Starling pays the reward into a Space in your account within 30 days of the conditions being met, and you can move it to your main balance at any time",
+      "The reward can be taken back if either of us closes our account before it's paid, or you cancel the direct debit or get a refund on a qualifying payment",
+      "Starling can change the amount or end the promotion at any time"
     ],
     "code": "VVDQAUR",
     "terms": "https://www.starlingbank.com/legal/terms/starling-referral-terms/",
     "expires": null,
     "checked": "2026-10-12",
-    "link": "https://www.starlingbank.com/"
+    "link": "https://www.starlingbank.com/",
+    "riskWarning": "Starling describes this scheme as for existing customers to refer friends and family, limits how many referral codes can be shared, and can refuse a reward if it believes the promotion is being abused or could harm its reputation. So the reward isn't guaranteed."
   }
 ]
