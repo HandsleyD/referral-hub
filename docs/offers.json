@@ -174,5 +174,23 @@
     "expires": null,
     "checked": "2026-10-12",
     "link": "https://www.rakuten.co.uk/r/DANIEL183102?eeid=44753"
+  },
+  {
+    "id": "revolut",
+    "provider": "Revolut",
+    "category": "Banking",
+    "userGets": "A Revolut account. The referral screen shows no sign-up reward for you, only mine.",
+    "referrerGets": "£70 per friend who completes the steps, with a maximum of 10 invites rewarded per period",
+    "conditions": [
+      "Finish all four steps before 27 October 2026, or I don't get the reward",
+      "1. Sign up with my link and verify your identity",
+      "2. Add money to your account by debit card or bank transfer",
+      "3. Make 3 purchases of at least £5 each. Some cash-type transactions, like gambling, gift cards or transfers, don't count",
+      "4. Order a physical card and add it to Apple Pay or Google Pay, then start using contactless",
+      "Revolut's terms and conditions apply"
+    ],
+    "expires": "2026-10-26",
+    "checked": "2026-10-12",
+    "link": "https://revolut.com/referral/?referral-code=danielav8!OCT1-26-AR-H2&geo-redirect"
   }
 ]
