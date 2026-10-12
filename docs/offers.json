@@ -139,5 +139,23 @@
     "checked": "2026-10-12",
     "link": "https://l.klarna.com/22XC/invite_NILCa4Dk87XGkqOZ",
     "userValue": 6
+  },
+  {
+    "id": "monzo",
+    "provider": "Monzo",
+    "category": "Banking",
+    "userGets": "A reward that depends on your country and the type of account you open. The amount isn't shown on the referral screen.",
+    "referrerGets": "A random reward: £5 for 94% of customers, £10 for 5% or £20 for 1%",
+    "conditions": [
+      "You have 30 days from tapping my link to finish all four steps, or neither of us gets a reward",
+      "1. Tap my link and enter your phone number",
+      "2. Download Monzo and sign up using the same phone number",
+      "3. Add money to your account",
+      "4. Pay for something with your Monzo card (there's no minimum amount)",
+      "Monzo says this offer could vanish at any time"
+    ],
+    "expires": null,
+    "checked": "2026-10-12",
+    "link": "https://join.monzo.com/c/2k070df9"
   }
 ]
