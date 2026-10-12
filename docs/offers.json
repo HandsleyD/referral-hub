@@ -234,5 +234,22 @@
     "checked": "2026-10-12",
     "link": "https://www.starlingbank.com/",
     "riskWarning": "Starling describes this scheme as for existing customers to refer friends and family, limits how many referral codes can be shared, and can refuse a reward if it believes the promotion is being abused or could harm its reputation. So the reward isn't guaranteed."
+  },
+  {
+    "id": "trading212",
+    "provider": "Trading 212",
+    "category": "Investing",
+    "userGets": "Free shares worth up to £100. The actual value varies.",
+    "referrerGets": "The same: free shares worth up to £100 for each friend, for up to 5 friends in this campaign",
+    "conditions": [
+      "Sign up using my referral link",
+      "Verify your identity",
+      "Make a deposit",
+      "This campaign ends on 2 November 2026"
+    ],
+    "riskWarning": "Investing involves risk, including losing some or all of your money. Free shares can fall in value. This isn't a recommendation to buy any investment.",
+    "expires": "2026-11-02",
+    "checked": "2026-10-12",
+    "link": "https://www.trading212.com/invite/4DtCrwrHcWM"
   }
 ]
