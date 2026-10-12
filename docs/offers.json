@@ -157,5 +157,22 @@
     "expires": null,
     "checked": "2026-10-12",
     "link": "https://join.monzo.com/c/2k070df9"
+  },
+  {
+    "id": "rakuten",
+    "provider": "Rakuten",
+    "category": "Cashback",
+    "userGets": "A Referral Sign Up Bonus. Rakuten publishes the amount on its own referral page, and I haven't been given it.",
+    "referrerGets": "£25, paid as Cashback into my Pending balance",
+    "conditions": [
+      "You must be a new Rakuten UK member, an individual living in the UK, who signs up through my link",
+      "Make a qualifying purchase worth at least £50, earning Cashback through Rakuten, within 90 days of signing up",
+      "You must be the person who pays for the purchase",
+      "Cashback awarded as a courtesy, or not reported by the retailer or network, doesn't count as a qualifying purchase",
+      "Subject to Rakuten's offer exclusions and terms, which can change"
+    ],
+    "expires": null,
+    "checked": "2026-10-12",
+    "link": "https://www.rakuten.co.uk/r/DANIEL183102?eeid=44753"
   }
 ]
