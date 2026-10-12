@@ -103,5 +103,23 @@
     "expires": null,
     "checked": "2026-10-12",
     "link": "https://app.dscout.com/r/66FVB4NGJC5VHKUG9OF4RU8U?campaign=uk-scouts"
+  },
+  {
+    "id": "lloyds-current-account",
+    "provider": "Lloyds Bank",
+    "category": "Banking",
+    "userGets": "£30 paid into your new current account",
+    "userValue": 30,
+    "referrerGets": "£30",
+    "conditions": [
+      "Open a Lloyds current account within 14 days of receiving the link",
+      "Lloyds pays the £30 into your new account within 35 calendar days",
+      "New Lloyds customers only, subject to approval",
+      "Student, Under 19s and Smart Start accounts are excluded",
+      "You enter a UK mobile number first, and it must be the same number you use to apply, or you won't be paid"
+    ],
+    "expires": null,
+    "checked": "2026-10-12",
+    "link": "https://apply.lloydsbank.co.uk/sales-content/cwa/l/onboardpca/index-app.html?from=ob&webDirect=true&redesign=true&token=KZ8DaPxI8ci/q81LFhkH1DOH45A7L6SX6+jalsDPi+g=&redesign=true#/refer-friend"
   }
 ]
