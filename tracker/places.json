@@ -1,0 +1,182 @@
+[
+  {
+    "name": "Your own hub page",
+    "kind": "Your site",
+    "verdict": "good",
+    "summary": "The best home for every link. You own it, so it isn't subject to anyone else's posting rules, and the disclosure is built in.",
+    "notes": [
+      "Share the hub URL from other places instead of individual referral links where you can.",
+      "Rakuten's terms specifically allow links on pages you own and control."
+    ],
+    "url": "https://handsleyd.github.io/referral-hub/",
+    "checked": "2026-10-12"
+  },
+  {
+    "name": "Friends and family, directly",
+    "kind": "Direct",
+    "verdict": "good",
+    "summary": "Where EDF's and Starling's terms intend their links to be used.",
+    "notes": [
+      "Send a link to people you know who would genuinely benefit.",
+      "Tell them it's your referral link and what you get."
+    ],
+    "checked": "2026-10-12"
+  },
+  {
+    "name": "r/beermoneyuk",
+    "kind": "Reddit",
+    "verdict": "careful",
+    "summary": "The biggest UK side-income sub, and the one you already use. Referral posts are allowed with conditions.",
+    "notes": [
+      "Include a non-referral link alongside your referral link or code, clearly labelled. Hiding a referral link behind a non-referral link gets a ban.",
+      "Name the site in the post title, give the steps to qualify, and mention any credit check.",
+      "Offers must be available in the UK.",
+      "Reposting the same site has a cooldown, and the figures I found disagree (5 days, once a month, 14 days). Check the live wiki and set the number in the tracker.",
+      "I couldn't find a rule restricting some apps to admins. Confirm with the mods if unsure.",
+      "My source was a third-party mirror of the wiki, which may be out of date."
+    ],
+    "url": "https://www.reddit.com/r/beermoneyuk/wiki/rules",
+    "source": "https://axebps-redlib.hf.space/r/beermoneyuk/wiki/rules",
+    "checked": "2026-10-12"
+  },
+  {
+    "name": "r/UK_Referral_Codes",
+    "kind": "Reddit",
+    "verdict": "good",
+    "summary": "A small sub made for sharing UK codes and links.",
+    "notes": [
+      "Its rule is not to repeat the same link within 7 days.",
+      "Small (about 4k members), so expect low reach.",
+      "Read the sidebar for current rules before posting."
+    ],
+    "url": "https://www.reddit.com/r/UK_Referral_Codes/",
+    "source": "https://gummysearch.com/r/UK_Referral_Codes/",
+    "checked": "2026-10-12"
+  },
+  {
+    "name": "r/Referralsuk",
+    "kind": "Reddit",
+    "verdict": "good",
+    "summary": "Small sub for honest UK referral offers with clear rewards, conditions and rotation rules.",
+    "notes": [
+      "Bans spam and fake claims, so state both sides and the conditions clearly (your cards already do).",
+      "About 2k members, so low reach."
+    ],
+    "url": "https://www.reddit.com/r/Referralsuk/",
+    "source": "https://gummysearch.com/r/Referralsuk/",
+    "checked": "2026-10-12"
+  },
+  {
+    "name": "r/DiscountCodesUK",
+    "kind": "Reddit",
+    "verdict": "careful",
+    "summary": "UK discount and voucher codes. Referral posts appear but are a minority.",
+    "notes": [
+      "Mostly retail codes, so only your shopping-type offers (Klarna, Rakuten) are likely to fit.",
+      "Check the sidebar rules first."
+    ],
+    "url": "https://www.reddit.com/r/DiscountCodesUK/",
+    "source": "https://gummysearch.com/r/DiscountCodesUK",
+    "checked": "2026-10-12"
+  },
+  {
+    "name": "X (Twitter)",
+    "kind": "Social",
+    "verdict": "careful",
+    "summary": "Free to post by hand. Automating it is no longer free for new developers.",
+    "notes": [
+      "Start the post with a clear \"Ad\" label. UK rules treat referral links as adverts and want the label up front, not buried.",
+      "X bans automated spam and scripting the website can get an account suspended. Posting identical content repeatedly is treated as manipulation.",
+      "The old free API tier is closed to new developers. Sources suggest pay-per-use credits, with link posts costing noticeably more. Check X's developer pages.",
+      "Use the \"Short version\" in the tracker's Compose tab, and post it yourself."
+    ],
+    "url": "https://help.x.com/rules-and-policies/x-automation",
+    "source": "https://www.postproxy.dev/blog/x-api-pricing-2026/",
+    "checked": "2026-10-12"
+  },
+  {
+    "name": "Bluesky",
+    "kind": "Social",
+    "verdict": "careful",
+    "summary": "Free to post, and its API is free to use, but the UK money audience is small.",
+    "notes": [
+      "Same \"Ad\" label rule applies.",
+      "If you ever automate, Bluesky's docs recommend labelling the account as a bot and respecting rate limits. Its guidelines ban repeated spam.",
+      "My source was vendor blogs, so check Bluesky's own docs."
+    ],
+    "url": "https://bsky.app/",
+    "source": "https://zernio.com/blog/bluesky-posting-api",
+    "checked": "2026-10-12"
+  },
+  {
+    "name": "Mastodon",
+    "kind": "Social",
+    "verdict": "careful",
+    "summary": "Free, and it supports scheduled posts, but each server sets its own rules and the audience is small.",
+    "notes": [
+      "Read your server's rules on promotion before posting.",
+      "Same \"Ad\" label rule applies."
+    ],
+    "source": "https://schedulala.com/developers/platforms/mastodon",
+    "checked": "2026-10-12"
+  },
+  {
+    "name": "EasyEarns",
+    "kind": "Referral marketplace",
+    "verdict": "careful",
+    "summary": "A UK referral marketplace where submissions are reviewed before they go live.",
+    "notes": [
+      "Run by a company, and the only review evidence I found was two Trustpilot reviews. Read its terms and what it does with your links before using it.",
+      "Check each provider's terms allow listing your link on a third-party site."
+    ],
+    "url": "https://easyearns.com/",
+    "source": "https://ie.trustpilot.com/review/easyearns.com",
+    "checked": "2026-10-12"
+  },
+  {
+    "name": "Share My Link",
+    "kind": "Referral marketplace",
+    "verdict": "careful",
+    "summary": "A newer UK platform for finding and sharing referral codes and cashback offers (launched April 2026).",
+    "notes": [
+      "I found no independent reviews, so treat it as unproven.",
+      "Check each provider's terms allow listing your link on a third-party site."
+    ],
+    "source": "https://peerpush.com/p/share-my-link",
+    "checked": "2026-10-12"
+  },
+  {
+    "name": "MoneySavingExpert forum",
+    "kind": "Forum",
+    "verdict": "avoid",
+    "summary": "Staff have said members shouldn't share referral codes or links.",
+    "notes": [
+      "Posting referral links publicly risks a ban.",
+      "Some people share by private message, but that's a grey area. Don't rely on it."
+    ],
+    "source": "https://forums.moneysavingexpert.com/discussion/6359193/how-much-have-you-earned-from-referrals-over-the-years/p1",
+    "checked": "2026-10-12"
+  },
+  {
+    "name": "HotUKDeals",
+    "kind": "Forum",
+    "verdict": "avoid",
+    "summary": "Its community rules treat referral links and requests for referrals as spam.",
+    "notes": [
+      "Don't post referral links in threads."
+    ],
+    "source": "https://www.hotukdeals.com/feedback/terms-and-conditions-rules-193303",
+    "checked": "2026-10-12"
+  },
+  {
+    "name": "Overclockers UK forums",
+    "kind": "Forum",
+    "verdict": "avoid",
+    "summary": "Referral codes are only allowed when someone asks for them. Unprompted posting risks suspension.",
+    "notes": [
+      "Only reply with a code if a member has asked for one."
+    ],
+    "source": "https://forums.overclockers.co.uk/help/boardrules",
+    "checked": "2026-10-12"
+  }
+]

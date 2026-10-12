@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Where to post (private)</title>
+<link rel="icon" href="../docs/favicon.svg" type="image/svg+xml">
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem("theme");
+    if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+  } catch (e) {}
+})();
+</script>
+<link rel="stylesheet" href="../docs/style.css">
+<link rel="stylesheet" href="tracker.css">
+<style>
+  .place { padding: 14px 16px; display: grid; gap: 8px; }
+  .place h3 { margin: 0; font-size: 17px; }
+  .place p { margin: 0; }
+  .place ul { margin: 0; padding-left: 18px; font-size: 14px; }
+  .place li + li { margin-top: 3px; }
+  .place-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .place-links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13px; }
+  .place-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <h1 class="brand">Where to post <small>private notes</small></h1>
+    <button id="themeToggle" class="icon-btn" type="button">☾</button>
+  </div>
+</header>
+
+<main>
+  <p><a href="index.html">← Back to the tracker</a></p>
+
+  <aside class="disclosure" aria-label="About this list">
+    <strong>Check the rules before every post.</strong>
+    <p>This list comes from web research on 12 Oct 2026, mostly from third-party summaries rather than each community's own current rules, and communities change their rules. Treat "Good" as "worth a look" and read the sidebar or terms first. Also check each provider's own terms: a community allowing your link doesn't change what the provider allows.</p>
+  </aside>
+
+  <div id="chips" class="chips" role="group" aria-label="Filter by verdict"></div>
+  <p id="meta" class="result-meta" aria-live="polite"></p>
+  <ul id="list" class="place-list"></ul>
+  <div id="error" class="notice error" hidden></div>
+</main>
+
+<script src="../docs/common.js"></script>
+<script>
+(function () {
+  "use strict";
+  const esc = RH.escapeHTML;
+  const VERDICT = {
+    good: { label: "Good", cls: "ok" },
+    careful: { label: "Check rules", cls: "warn" },
+    avoid: { label: "Avoid", cls: "danger" },
+  };
+  let places = [], filter = "all";
+
+  const safeUrl = (u) => { try { return new URL(u).protocol === "https:" ? u : ""; } catch (e) { return ""; } };
+
+  function render() {
+    const shown = places.filter((p) => filter === "all" || p.verdict === filter);
+    document.getElementById("meta").textContent = shown.length + " of " + places.length + " places";
+    document.getElementById("list").innerHTML = shown.map((p) => {
+      const v = VERDICT[p.verdict] || VERDICT.careful;
+      const links = [
+        safeUrl(p.url) ? `<a href="${esc(p.url)}" target="_blank" rel="noopener">Open ↗</a>` : "",
+        safeUrl(p.source) ? `<a href="${esc(p.source)}" target="_blank" rel="noopener">Where I found this ↗</a>` : "",
+        p.checked ? `<span class="hint">Researched ${esc(RH.formatDate(p.checked))}</span>` : "",
+      ].join("");
+      return `<li class="card place">
+        <div class="place-head"><h3>${esc(p.name)}</h3><span class="tag big ${v.cls}">${v.label}</span></div>
+        <p class="hint">${esc(p.kind)}</p>
+        <p>${esc(p.summary)}</p>
+        ${(p.notes || []).length ? `<ul>${p.notes.map((n) => `<li>${esc(n)}</li>`).join("")}</ul>` : ""}
+        <div class="place-links">${links}</div>
+      </li>`;
+    }).join("");
+  }
+
+  function chips() {
+    const counts = { all: places.length };
+    for (const p of places) counts[p.verdict] = (counts[p.verdict] || 0) + 1;
+    const order = ["all", "good", "careful", "avoid"].filter((k) => counts[k]);
+    document.getElementById("chips").innerHTML = order.map((k) =>
+      `<button type="button" class="chip" data-v="${k}" aria-pressed="${k === filter}">${k === "all" ? "All" : VERDICT[k].label}<span class="count">${counts[k]}</span></button>`).join("");
+  }
+
+  document.getElementById("chips").addEventListener("click", (e) => {
+    const b = e.target.closest(".chip");
+    if (!b) return;
+    filter = b.dataset.v;
+    chips();
+    render();
+  });
+
+  RH.initThemeToggle(document.getElementById("themeToggle"));
+  fetch("places.json", { cache: "no-cache" })
+    .then((r) => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+    .then((data) => { places = Array.isArray(data) ? data : []; chips(); render(); })
+    .catch(() => {
+      const box = document.getElementById("error");
+      box.textContent = "Couldn't load places.json. Open this page via the local server (node scripts/serve.mjs), not straight from disk.";
+      box.hidden = false;
+    });
+})();
+</script>
+</body>
+</html>

@@ -101,6 +101,10 @@ Open `tracker/` from the local server (see above). It's for your eyes only, with
 
 **Backup.** Clearing site data, using private browsing, or switching browser/device means your records aren't there. Use **Setup → Export backup** now and then, and **Import backup** to restore or move to another device.
 
+## Where to post
+
+`tracker/places.html` is a private list of communities and sites for sharing links, each marked Good, Check rules or Avoid, with the notes and source I found. The entries live in `tracker/places.json`. Add or edit entries there. It's a starting point from research on 12 Oct 2026, so check each community's current rules before posting.
+
 ## Tests
 
 ```
@@ -112,6 +116,6 @@ node scripts/validate-offers.mjs   # offers.json
 
 ```
 docs/       public site (GitHub Pages)   index.html, app.js, common.js, style.css, offers.json
-tracker/    private tool (not published)  index.html, tracker.js, logic.js, tracker.css
+tracker/    private tool (not published)  index.html, tracker.js, logic.js, tracker.css, places.html + places.json (where to post)
 scripts/    serve.mjs, validate-offers.mjs, test-tracker.mjs
 ```

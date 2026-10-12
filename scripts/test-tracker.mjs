@@ -142,5 +142,18 @@ test("short Ad version starts with Ad:, keeps the link, and fits 280 (links coun
   assert.ok(r.text.endsWith("https://l.example/"));
   assert.match(T.composeShort({ ...long, userGets: "u", referrerGets: "r", code: "CODE1" }).text, /Code: CODE1\./);
 });
+test("tracker/places.json entries are well formed", () => {
+  const places = require("../tracker/places.json");
+  assert.ok(places.length > 0);
+  const names = new Set();
+  for (const p of places) {
+    assert.ok(p.name && p.kind && p.summary, "missing text in " + JSON.stringify(p.name));
+    assert.ok(["good", "careful", "avoid"].includes(p.verdict), p.name + " verdict");
+    assert.ok(!names.has(p.name), "duplicate " + p.name);
+    names.add(p.name);
+    for (const u of [p.url, p.source].filter(Boolean)) assert.match(u, /^https:\/\//, p.name + " url");
+    if (p.checked) assert.notEqual(RH.parseISO(p.checked), null, p.name + " date");
+  }
+});
 
 console.log("\n" + n + " tests passed");
