@@ -110,16 +110,17 @@
     "category": "Banking",
     "userGets": "£30 paid into your new current account",
     "userValue": 30,
-    "referrerGets": "£30",
+    "referrerGets": "£30, paid into my oldest Lloyds or Halifax current account",
     "conditions": [
-      "Open a Lloyds current account within 14 days of receiving the link",
-      "Lloyds pays the £30 into your new account within 35 calendar days",
+      "Open a Lloyds current account through my link before the link expires (see the warning below)",
+      "Lloyds pays the £30 as a cash credit within 35 calendar days of the account being opened",
       "New Lloyds customers only, subject to approval",
-      "Student, Under 19s and Smart Start accounts are excluded",
+      "Excluded for both of us: Under 19s, Smart Start, Lloyds Student, Halifax Student, Money Smart and Expresscash accounts",
       "You enter a UK mobile number first, and it must be the same number you use to apply, or you won't be paid"
     ],
-    "expires": null,
+    "expires": "2026-10-26",
     "checked": "2026-10-12",
-    "link": "https://apply.lloydsbank.co.uk/sales-content/cwa/l/onboardpca/index-app.html?from=ob&webDirect=true&redesign=true&token=KZ8DaPxI8ci/q81LFhkH1DOH45A7L6SX6+jalsDPi+g=&redesign=true#/refer-friend"
+    "link": "https://apply.lloydsbank.co.uk/sales-content/cwa/l/onboardpca/index-app.html?from=ob&webDirect=true&redesign=true&token=KZ8DaPxI8ci/q81LFhkH1DOH45A7L6SX6+jalsDPi+g=&redesign=true#/refer-friend",
+    "riskWarning": "Each Lloyds referral link only lasts 14 days. You can still open an account through an expired link, but neither of us would get the £30. This card disappears when the link I last generated runs out, so if you can see it, the link should still be live."
   }
 ]
