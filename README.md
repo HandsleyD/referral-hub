@@ -52,6 +52,7 @@ Open `docs/offers.json` and add an object to the list. You never touch the HTML.
 | `link` | yes* | Your referral link. Must be `https://`. |
 | `links` | yes* | Instead of `link`: a list like `[{"label": "Law", "url": "https://…"}]` for one provider with several links (e.g. one per field). Shown as a "Choose your field" row of buttons. *Use one of `link` or `links`. |
 | `buttonLabel` | no | Text for the main button, e.g. `"Go to Starling"`. Defaults to "Get this offer". |
+| `officialLink` | no | The provider's ordinary, non-referral page. Included in composed posts, because communities like r/beermoneyuk require a non-referral link next to the referral one. Currently set to each provider's homepage, so swap in a more specific page if you like. |
 | `code` | no | A referral code (for providers that use a code rather than a link). Shown in a box with a Copy button, and included in composed posts. |
 | `terms` | no | `https://` link to the provider's own referral terms. Shown on the card as "Provider's terms". |
 | `riskWarning` | no | Required wording for investing products. Shown prominently on the card. |
@@ -93,6 +94,7 @@ Open `tracker/` from the local server (see above). It's for your eyes only, with
 - **Setup.** Add each community and give it a cooldown in days. Leave it blank if you're unsure. It then says *not set* rather than guessing. Choose whether the cooldown counts **per offer** or from **any post** you make in that community. Add notes (rules link, format requirements). Tick offers you can't post there, such as admin-only ones. They're shown as "Not available here".
 - **Log a post.** Record offer, community and date (and optionally the post's URL). The cooldown starts from that date.
 - **Status.** One card per community listing every live offer, sorted with things past their cooldown first, then still cooling down. Cooling-down rows show the date the cooldown ends and days to go, and flag when the offer ends before then.
+- **Short version.** Under the full post, a 280-character version for X or Bluesky that opens with "Ad:" so the referral relationship is clear first. Links count as 23 characters, as on X. For offers with many links it uses your hub link (set in Setup). Copy and post it yourself; nothing is sent anywhere.
 - **Compose.** Generates a ready-to-copy post body from the offer data: what they get, the referral disclosure and what you get, conditions, end date, risk warning, and link (plus your hub link if set in Setup). It's editable before you copy. Check it against the community's own post format first.
 
 **Cooldown arithmetic:** a 7-day cooldown on a post made on the 10th ends on the 17th, so on the 17th it's shown as eligible and on the 16th it's still cooling with 1 day to go. Dates are plain calendar dates in your local time.

@@ -96,6 +96,7 @@
     }
     if (o.buttonLabel !== undefined && !nonEmptyString(o.buttonLabel)) p.push('"buttonLabel" must be text (or leave it out)');
     if (o.code !== undefined && !nonEmptyString(o.code)) p.push('"code" must be text (or leave it out)');
+    if (o.officialLink !== undefined && !isHttpsUrl(o.officialLink)) p.push('"officialLink" must be a full https:// URL (or leave it out)');
     if (o.terms !== undefined && !isHttpsUrl(o.terms)) p.push('"terms" must be a full https:// URL (or leave it out)');
     for (const f of ["riskWarning", "notes"]) {
       if (o[f] !== undefined && !nonEmptyString(o[f])) p.push('"' + f + '" must be text (or leave it out)');

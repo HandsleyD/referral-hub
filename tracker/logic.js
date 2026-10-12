@@ -72,11 +72,45 @@
       lines.push("Links (pick your field):");
       for (const l of offer.links) lines.push("- " + l.label + ": " + l.url);
     } else if (offer.link) lines.push("Link: " + offer.link);
+    if (offer.officialLink) lines.push("Non-referral link: " + offer.officialLink);
     if (offer.terms) lines.push("Terms: " + offer.terms);
     if (hubUrl) lines.push("All my current offers: " + hubUrl);
     lines.push("");
     lines.push("Check the provider's own terms before signing up. They can change.");
     return lines.join("\n");
+  }
+
+  // Short version for X / Bluesky. Opens with "Ad:" so the commercial
+  // relationship is clear before anyone reads on (UK ad rules). Any URL
+  // counts as 23 characters on X regardless of its real length, so that's how
+  // length is measured. The offer text is trimmed (never the label or link)
+  // until it fits.
+  const URL_LEN = 23;
+  function shortLength(text) {
+    return text.replace(/https?:\/\/\S+/g, "x".repeat(URL_LEN)).length;
+  }
+  function composeShort(offer, hubUrl, max) {
+    max = max || 280;
+    // Offers with many links share the hub page rather than one arbitrary link.
+    const link = offer.links ? (hubUrl || offer.links[0].url) : offer.link;
+    let you = offer.userGets, me = offer.referrerGets;
+    const build = () => "Ad: " + offer.provider + " referral link. You get: " + you + " I get: " + me +
+      (offer.code ? " Code: " + offer.code + "." : "") + " " + link;
+    const end = (t) => (/[.!?…]$/.test(t) ? t : t + ".");
+    you = end(you); me = end(me);
+    const trim = (t) => {
+      const body = t.replace(/[.!?…]$/, "");
+      const cut = body.slice(0, Math.max(20, Math.floor(body.length * 0.85)));
+      // Prefer cutting at a word boundary, but never loop without shrinking.
+      const atWord = cut.replace(/\s+\S*$/, "");
+      return (atWord.length >= 20 && atWord.length < body.length ? atWord : cut) + "…";
+    };
+    let guard = 200;
+    while (shortLength(build()) > max && guard-- > 0) {
+      if (you.length >= me.length) you = trim(you); else me = trim(me);
+    }
+    const text = build();
+    return { text, length: shortLength(text), fits: shortLength(text) <= max };
   }
 
   function newId(prefix) {
@@ -108,7 +142,7 @@
     return out;
   }
 
-  const api = { hasCooldown, lastPost, status, compareStatus, composePost, newId, sanitizeState };
+  const api = { hasCooldown, lastPost, status, compareStatus, composePost, composeShort, shortLength, newId, sanitizeState };
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   else window.RHT = api;
 })();

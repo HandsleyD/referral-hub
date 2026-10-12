@@ -67,7 +67,8 @@
         "label": "Electrical Engineering",
         "url": "https://app.dataannotation.tech/referrals/join?token=MASR4R9KczabYnl8edm0SYz7Oe5zgGbN3WuBr9OiNgI"
       }
-    ]
+    ],
+    "officialLink": "https://www.dataannotation.tech/"
   },
   {
     "id": "edf-energy",
@@ -86,6 +87,7 @@
     "expires": null,
     "checked": "2026-10-12",
     "link": "https://edfenergy.com/quote/refer-a-friend/frosty-pool-8702",
+    "officialLink": "https://www.edfenergy.com/",
     "userValue": 50
   },
   {
@@ -102,7 +104,8 @@
     ],
     "expires": null,
     "checked": "2026-10-12",
-    "link": "https://app.dscout.com/r/66FVB4NGJC5VHKUG9OF4RU8U?campaign=uk-scouts"
+    "link": "https://app.dscout.com/r/66FVB4NGJC5VHKUG9OF4RU8U?campaign=uk-scouts",
+    "officialLink": "https://dscout.com/"
   },
   {
     "id": "lloyds-current-account",
@@ -121,6 +124,7 @@
     "expires": "2026-10-26",
     "checked": "2026-10-12",
     "link": "https://apply.lloydsbank.co.uk/sales-content/cwa/l/onboardpca/index-app.html?from=ob&webDirect=true&redesign=true&token=KZ8DaPxI8ci/q81LFhkH1DOH45A7L6SX6+jalsDPi+g=&redesign=true#/refer-friend",
+    "officialLink": "https://www.lloydsbank.com/",
     "riskWarning": "Each Lloyds referral link only lasts 14 days. You can still open an account through an expired link, but neither of us would get the £30. This card disappears when the link I last generated runs out, so if you can see it, the link should still be live."
   },
   {
@@ -138,6 +142,7 @@
     "expires": null,
     "checked": "2026-10-12",
     "link": "https://l.klarna.com/22XC/invite_NILCa4Dk87XGkqOZ",
+    "officialLink": "https://www.klarna.com/uk/",
     "userValue": 6
   },
   {
@@ -156,7 +161,8 @@
     ],
     "expires": null,
     "checked": "2026-10-12",
-    "link": "https://join.monzo.com/c/2k070df9"
+    "link": "https://join.monzo.com/c/2k070df9",
+    "officialLink": "https://monzo.com/"
   },
   {
     "id": "rakuten",
@@ -173,7 +179,8 @@
     ],
     "expires": null,
     "checked": "2026-10-12",
-    "link": "https://www.rakuten.co.uk/r/DANIEL183102?eeid=44753"
+    "link": "https://www.rakuten.co.uk/r/DANIEL183102?eeid=44753",
+    "officialLink": "https://www.rakuten.co.uk/"
   },
   {
     "id": "revolut",
@@ -191,7 +198,8 @@
     ],
     "expires": "2026-10-26",
     "checked": "2026-10-12",
-    "link": "https://revolut.com/referral/?referral-code=danielav8!OCT1-26-AR-H2&geo-redirect"
+    "link": "https://revolut.com/referral/?referral-code=danielav8!OCT1-26-AR-H2&geo-redirect",
+    "officialLink": "https://www.revolut.com/"
   },
   {
     "id": "robinhood-uk",
@@ -209,7 +217,8 @@
     "riskWarning": "All investments involve risks, including the possible loss of principal.",
     "expires": null,
     "checked": "2026-10-12",
-    "link": "https://join.robinhood.com/danielh-9bb910"
+    "link": "https://join.robinhood.com/danielh-9bb910",
+    "officialLink": "https://robinhood.com/gb/en/"
   },
   {
     "id": "starling",
@@ -233,6 +242,7 @@
     "expires": null,
     "checked": "2026-10-12",
     "link": "https://www.starlingbank.com/",
+    "officialLink": "https://www.starlingbank.com/",
     "riskWarning": "Starling describes this scheme as for existing customers to refer friends and family, limits how many referral codes can be shared, and can refuse a reward if it believes the promotion is being abused or could harm its reputation. So the reward isn't guaranteed.",
     "buttonLabel": "Go to Starling"
   },
@@ -251,7 +261,8 @@
     "riskWarning": "Investing involves risk, including losing some or all of your money. Free shares can fall in value. This isn't a recommendation to buy any investment.",
     "expires": "2026-11-02",
     "checked": "2026-10-12",
-    "link": "https://www.trading212.com/invite/4DtCrwrHcWM"
+    "link": "https://www.trading212.com/invite/4DtCrwrHcWM",
+    "officialLink": "https://www.trading212.com/"
   },
   {
     "id": "zopa-biscuit",
@@ -269,6 +280,7 @@
     ],
     "expires": "2026-10-31",
     "checked": "2026-10-12",
-    "link": "https://www.zopa.com/mgma?referralCode=bd056d0e1d9fb4f5fed8"
+    "link": "https://www.zopa.com/mgma?referralCode=bd056d0e1d9fb4f5fed8",
+    "officialLink": "https://www.zopa.com/"
   }
 ]

@@ -122,6 +122,7 @@
     const o = offers.find((x) => x.id === composeSel.offer);
     $("composeBody").value = o ? RHT.composePost(o, state.hubUrl) : "";
     $("copyMsg").textContent = "";
+    updateShort();
     const c = state.communities.find((x) => x.id === composeSel.community);
     if (!o || !c) { $("composeStatus").innerHTML = ""; return; }
     const st = RHT.status(c, o, state.posts, todayISO());
@@ -129,6 +130,22 @@
       `<p><span class="tag big ${TAGCLS[st.kind]}">${LABEL[st.kind]}</span> <span class="hint">${esc(statusLine(st))}</span></p>` +
       (c.note ? `<p class="hint" style="white-space:pre-wrap">${esc(c.note)}</p>` : "");
   }
+  function updateShort() {
+    const o = offers.find((x) => x.id === $("composeOffer").value);
+    if (!o) { $("shortBody").value = ""; $("shortCount").textContent = ""; return; }
+    const r = RHT.composeShort(o, state.hubUrl);
+    $("shortBody").value = r.text;
+    $("shortCount").textContent = "(" + r.length + "/280, links count as 23)";
+    $("copyShortMsg").textContent = "";
+  }
+  $("shortBody").addEventListener("input", () => {
+    $("shortCount").textContent = "(" + RHT.shortLength($("shortBody").value) + "/280, links count as 23)";
+  });
+  $("copyShortBtn").addEventListener("click", async () => {
+    const t = $("shortBody");
+    try { await navigator.clipboard.writeText(t.value); $("copyShortMsg").textContent = "Copied."; }
+    catch (e) { t.focus(); t.select(); $("copyShortMsg").textContent = "Selected. Copy it manually."; }
+  });
   $("composeOffer").addEventListener("change", fillCompose);
   $("composeCommunity").addEventListener("change", fillCompose);
   $("regenBtn").addEventListener("click", fillCompose);

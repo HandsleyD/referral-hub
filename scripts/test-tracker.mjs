@@ -120,5 +120,27 @@ test("code and terms are validated and appear in composed posts", () => {
   assert.match(body, /Referral code: ABC123/);
   assert.match(body, /Terms: https:\/\/c\.example\/terms/);
 });
+test("official non-referral link validated and included in the long post", () => {
+  const o = { id: "c", provider: "C", category: "X", userGets: "u", referrerGets: "r", link: "https://c.example/ref", officialLink: "https://c.example/" };
+  assert.deepEqual(RH.offerProblems(o), []);
+  assert.ok(RH.offerProblems({ ...o, officialLink: "nope" }).length);
+  assert.match(T.composePost(o), /Non-referral link: https:\/\/c\.example\//);
+});
+
+test("short Ad version starts with Ad:, keeps the link, and fits 280 (links count as 23)", () => {
+  const real = require("../docs/offers.json");
+  for (const o of real) {
+    const r = T.composeShort(o, "https://hub.example/");
+    assert.ok(r.text.startsWith("Ad: "), o.id);
+    assert.ok(r.fits && r.length <= 280, o.id + " length " + r.length);
+    const url = o.links ? "https://hub.example/" : o.link;
+    assert.ok(r.text.endsWith(url), o.id + " keeps its link intact");
+  }
+  const long = { id: "l", provider: "L", userGets: "x".repeat(400), referrerGets: "y".repeat(400), link: "https://l.example/" };
+  const r = T.composeShort(long);
+  assert.ok(r.fits);
+  assert.ok(r.text.endsWith("https://l.example/"));
+  assert.match(T.composeShort({ ...long, userGets: "u", referrerGets: "r", code: "CODE1" }).text, /Code: CODE1\./);
+});
 
 console.log("\n" + n + " tests passed");
