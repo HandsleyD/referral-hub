@@ -179,7 +179,7 @@
     "id": "revolut",
     "provider": "Revolut",
     "category": "Banking",
-    "userGets": "A Revolut account. The referral screen shows no sign-up reward for you, only mine.",
+    "userGets": "A Revolut account. I believe there's no sign-up reward for you, but check Revolut's own page.",
     "referrerGets": "£70 per friend who completes the steps, with a maximum of 10 invites rewarded per period",
     "conditions": [
       "Finish all four steps before 27 October 2026, or I don't get the reward",
@@ -240,8 +240,8 @@
     "id": "trading212",
     "provider": "Trading 212",
     "category": "Investing",
-    "userGets": "Free shares worth up to £100. The actual value varies.",
-    "referrerGets": "The same: free shares worth up to £100 for each friend, for up to 5 friends in this campaign",
+    "userGets": "1 free fractional share. Its value varies.",
+    "referrerGets": "Free shares worth up to £100 for each friend, for up to 5 friends in this campaign",
     "conditions": [
       "Sign up using my referral link",
       "Verify your identity",
