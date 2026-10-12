@@ -87,5 +87,21 @@
     "checked": "2026-10-12",
     "link": "https://edfenergy.com/quote/refer-a-friend/frosty-pool-8702",
     "userValue": 50
+  },
+  {
+    "id": "dscout",
+    "provider": "Dscout",
+    "category": "Side income",
+    "userGets": "Access to paid research studies. No sign-up bonus.",
+    "referrerGets": "A $5 bonus each time you get paid for completing a study, up to $50 in total",
+    "conditions": [
+      "For people living in the UK",
+      "You must sign up through my link so Dscout can track my reward",
+      "My bonus is paid by Dscout, not taken from your pay",
+      "Study availability and pay vary. Check Dscout's own page for details"
+    ],
+    "expires": null,
+    "checked": "2026-10-12",
+    "link": "https://app.dscout.com/r/66FVB4NGJC5VHKUG9OF4RU8U?campaign=uk-scouts"
   }
 ]
